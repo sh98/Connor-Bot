@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on('ready', () => {
+  client.user.setGame('Type .cb help')
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
@@ -11,14 +12,14 @@ client.on('message', msg => {
   }
   if (msg.content === '.cb invite') {
 	console.log('Somebody loves your bot!')
-    msg.channel.send('Here you go! https://discordapp.com/oauth2/authorize?client_id=374700530112659456&scope=bot&permissions=0000001');
+    msg.channel.send('Here you go! ENTER-INVITE-HERE');
   }
   if (msg.content === '.cb help') {
     msg.channel.send('Commands: .cb ping | Replies with Pong | .cb help | Well... | .cb info | Displays info about this bot | Music commands... .cb play | Searches YouTube for videos and plays them | .volume a-value | Changes the volume of the MusicBot | .skip | Skips the current song');
   }
   if (msg.content === '.cb info') {
 	console.log('Somebody just used the botinfo command.')
-    msg.channel.send('Bot Owner: `Cøηηør#0941` | Bot Creator: Cøηηør and Person | Coder: Person | Online since: ENTER-DATE-HERE');
+    msg.channel.send('Bot Owner: `Cøηηør#0941` | Bot Creator: Cøηηør and Person | Coder: Person | Online since: ENTER-DATE');
   }
   if (msg.content === '.cb botinfo') {
 	console.log('Somebody just used the botinfo command.')
@@ -56,4 +57,4 @@ client.on('message', msg => {
   }
 });
 
-client.login('ENTER-TOKEN-HERE');
+client.login('Enter-Token-Here');
